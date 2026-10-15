@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tiga Portofolio Mahasiswa</title>
+<meta name="description" content="Pilih portofolio: Muhammad Haikal Izza Syaputra, Bernice Figo Ghozali, atau Gesha Al Palimbani.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:var(--font);background:#05070b;color:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+.page{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+.top{padding:22px clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;background:#05070b}
+.top h1{margin:0;font-size:1.05rem;font-weight:600;letter-spacing:-.01em}
+.top p{margin:0;font-size:.95rem;color:#9aa4b2}
+
+.panels{flex:1;display:flex;min-height:560px}
+.panel{
+  --bg:#000;--fg:#fff;--accent:#fff;
+  position:relative;flex:1 1 0;overflow:hidden;isolation:isolate;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:clamp(22px,3vw,44px);
+  background:var(--bg);color:var(--fg);
+  transition:flex-grow .6s var(--ease);
+}
+.panel img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;
+  z-index:-2;transition:transform .8s var(--ease),filter .5s var(--ease);
+  filter:saturate(.85) brightness(.9);
+}
+.panel::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,transparent 25%,var(--bg) 88%);
+}
+.panel:hover,.panel:focus-visible{flex-grow:1.55}
+.panel:hover img,.panel:focus-visible img{transform:scale(1.04);filter:saturate(1) brightness(1)}
+.panel:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+
+.role{margin:0 0 10px;font-size:.98rem;font-weight:400;color:var(--accent)}
+.name{margin:0;font-weight:800;line-height:.95;letter-spacing:-.035em;font-size:clamp(2.2rem,4.4vw,4.4rem);text-wrap:balance}
+.go{
+  margin-top:24px;align-self:flex-start;
+  font-weight:600;font-size:1rem;
+  padding:12px 20px;border-radius:999px;
+  background:var(--accent);color:var(--bg);
+  transition:transform .3s var(--ease);
+}
+.panel:hover .go,.panel:focus-visible .go{transform:translateX(6px)}
+
+/* Haikal — navy + cyan */
+.haikal{--bg:#09111f;--fg:#ebf1ff;--accent:#72d7ff}
+/* Bernice — deep teal + mint */
+.bernice{--bg:#062018;--fg:#eafff4;--accent:#8ef7a8}
+/* Gesha — putih bersih, hitam */
+.gesha{--bg:#f4f4f4;--fg:#000;--accent:#000}
+.gesha .go{color:#fff}
+.gesha img{filter:grayscale(1) contrast(1.05) brightness(1)}
+.gesha:hover img,.gesha:focus-visible img{filter:grayscale(0) contrast(1) brightness(1)}
+
+@media (max-width:820px){
+  .panels{flex-direction:column;min-height:0}
+  .panel{flex:none;min-height:420px}
+  .panel:hover,.panel:focus-visible{flex-grow:0}
+  .name{font-size:clamp(2.4rem,11vw,3.6rem)}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <h1>Tiga Portofolio Mahasiswa</h1>
+    <p>Pilih satu untuk membuka websitenya</p>
+  </header>
+
+  <main class="panels">
+    <a class="panel haikal" href="haikal/index.html" aria-label="Buka portofolio Muhammad Haikal Izza Syaputra">
+      <img src="img/haikal.jpg" alt="">
+      <p class="role">Mahasiswa / Web Developer Enthusiast</p>
+      <h2 class="name">Muhammad Haikal Izza Syaputra</h2>
+      <span class="go">Buka portofolio Haikal</span>
+    </a>
+
+    <a class="panel bernice" href="bernice/index.html" aria-label="Buka portofolio Bernice Figo Ghozali">
+      <img src="img/bernice.jpg" alt="">
+      <p class="role">Mahasiswa Teknik Informatika</p>
+      <h2 class="name">Bernice Figo Ghozali</h2>
+      <span class="go">Buka portofolio Bernice</span>
+    </a>
+
+    <a class="panel gesha" href="gesha/index.html" aria-label="Buka portofolio Gesha Al Palimbani">
+      <img src="img/gesha.jpg" alt="">
+      <p class="role">Computer Science Student</p>
+      <h2 class="name">Gesha Al Palimbani</h2>
+      <span class="go">Buka portofolio Gesha</span>
+    </a>
+  </main>
+</div>
+</body>
+</html>

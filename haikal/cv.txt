@@ -1,0 +1,5 @@
+Nama: Muhammad Haikal Izza Syaputra
+Peran: Mahasiswa / Web Developer Enthusiast
+Pendidikan: Universitas Islam Negeri Syarif Hidayatullah Jakarta
+Keahlian: Java, Python, JavaScript, HTML, CSS, Git, VS Code
+Pengalaman: Mengerjakan berbagai proyek tugas kuliah pemrograman dan analisis data.
